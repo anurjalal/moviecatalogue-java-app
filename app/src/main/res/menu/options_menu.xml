@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:menuCategory="container">
+        <item android:id="@+id/action_search"
+            android:icon="@drawable/ic_search_white_24dp"
+            android:title="Search"
+            app:showAsAction="ifRoom|collapseActionView"
+            app:actionViewClass="android.widget.SearchView"/>
+        <item android:id="@+id/language_setting"
+            android:title="settings"
+            android:icon = "@drawable/ic_language_white_24dp"
+            app:showAsAction="always" />
+        <item android:id="@+id/notification_setting"
+            android:title="notification"
+            android:icon="@drawable/ic_settings_black_24dp"
+            app:showAsAction="always"/>
+    </group>
+</menu>

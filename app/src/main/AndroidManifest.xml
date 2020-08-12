@@ -38,7 +38,7 @@
         <receiver
             android:name=".receiver.AlarmReceiver"
             android:enabled="true"
-            android:exported="false"></receiver>
+            android:exported="true"></receiver>
         <receiver
             android:name=".receiver.BootReceiver"
             android:enabled="true"

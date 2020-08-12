@@ -1,3 +1,4 @@
+// This code is created by Ahmad Nurjalal --> github.com/anurjalal
 package my.jalal.catalogue.receiver;
 
 import android.content.BroadcastReceiver;
@@ -16,13 +17,10 @@ public class BootReceiver extends BroadcastReceiver {
             Setting setting = settingPreferences.getSetting();
             AlarmReceiver alarmReceiver = new AlarmReceiver(); //must be instanced here
             if (setting.getAppDailyReminder() == 1) {
-                Log.d("NILAINYA", String.valueOf(setting.getAppDailyReminder()));
                 alarmReceiver.setRepeatingAlarm(context.getApplicationContext(), AlarmReceiver.TYPE_APP_ALARM);
-                Log.d("cancel3", "cancel3");
             }
             if (setting.getMovieDailyReminder() == 1) {
                 alarmReceiver.setRepeatingAlarm(context.getApplicationContext(), AlarmReceiver.TYPE_MOVIE_ALARM);
-                Log.d("cancel2", "cancel2");
             }
         }
     }

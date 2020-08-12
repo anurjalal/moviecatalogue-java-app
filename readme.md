@@ -1,0 +1,1 @@
+This code is created by Ahmad Nurjalal for final submission in Belajar Fundamental Aplikasi Android class at Dicoding, an Google Authorized Training Partner

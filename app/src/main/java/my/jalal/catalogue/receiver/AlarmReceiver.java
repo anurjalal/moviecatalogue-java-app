@@ -86,15 +86,15 @@ public class AlarmReceiver extends BroadcastReceiver {
         intent.putExtra(EXTRA_TYPE, type);
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.MINUTE, 16);
+        calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
         PendingIntent pendingIntent;
         if (type.equals(TYPE_APP_ALARM)) {
-            calendar.set(Calendar.HOUR_OF_DAY, 13); //7 o'clock
+            calendar.set(Calendar.HOUR_OF_DAY, 7); //7 o'clock
             pendingIntent = PendingIntent.getBroadcast(context, ID_APP_REPEATING, intent, 0);
         } else {
-            calendar.set(Calendar.HOUR_OF_DAY, 13); //8 o'clock
+            calendar.set(Calendar.HOUR_OF_DAY, 8); //8 o'clock
             pendingIntent = PendingIntent.getBroadcast(context, ID_MOVIE_REPEATING, intent, 0);
         }
         if (calendar.getTimeInMillis() < System.currentTimeMillis()) { // prevent alarm triggered when it set after the set-time
